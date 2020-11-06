@@ -1,64 +1,24 @@
 [
     {
-        "image": "",
-        "title": "Other",
-        "text": "Other",
-        "location": "Other",
+        "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?fit=crop&w=800&q=60",
+        "title": "Always good to see you",
+        "text": "It's always a pleasure to see you. It fills me with joy to see you performing on the job.",
+        "location": "In parliament",
         "actions": {
             "left": {
-                "description": "Other:L",
+                "description": "Oh... yes",
                 "modifier": {
-                    "type": "set",
+                    "type": "add",
                     "state": {},
                     "flags": {}
                 }
             },
             "right": {
-                "description": "Other:R",
+                "description": "Thank you",
                 "modifier": {
-                    "type": "set",
+                    "type": "add",
                     "state": {},
                     "flags": {}
-                }
-            }
-        },
-        "weight": 1,
-        "isAvailableWhen": [
-            {
-                "environment": [
-                    0,
-                    100
-                ]
-            }
-        ],
-        "type": "card"
-    },
-    {
-        "image": "",
-        "title": "A",
-        "text": "A",
-        "location": "A",
-        "actions": {
-            "left": {
-                "description": "A:L",
-                "modifier": {
-                    "type": "set",
-                    "state": {},
-                    "flags": {
-                        "a-left:card:3": true,
-                        "a-origin:card:5": true
-                    }
-                }
-            },
-            "right": {
-                "description": "A:R",
-                "modifier": {
-                    "type": "set",
-                    "state": {},
-                    "flags": {
-                        "a-right:card:4": true,
-                        "a-origin:card:5": true
-                    }
                 }
             }
         },
@@ -66,254 +26,127 @@
         "isAvailableWhen": [
             {
                 "state": {
-                    "environment": [
+                    "work-hour:prop:23": [
                         0,
                         100
                     ]
                 },
-                "flags": {
-                    "a-origin:card:5": false
-                }
+                "flags": {}
             }
         ],
         "type": "card"
     },
     {
-        "image": "",
-        "title": "A:L",
-        "text": "A:L",
-        "location": "A:L",
+        "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?fit=crop&w=800&q=60",
+        "title": "Good morning",
+        "text": "Nice to see you today. I hope your morning has been efficient.",
+        "location": "In parliament",
         "actions": {
             "left": {
-                "description": "A:L:L",
+                "description": "Not really",
                 "modifier": {
-                    "type": "set",
+                    "type": "add",
                     "state": {},
-                    "flags": {
-                        "al-left:card:6": true,
-                        "a-left:card:3": false
-                    }
+                    "flags": {}
                 }
             },
             "right": {
-                "description": "A:L:R",
+                "description": "Yes! Thank you",
                 "modifier": {
-                    "type": "set",
+                    "type": "add",
                     "state": {},
-                    "flags": {
-                        "al-right:card:7": true,
-                        "a-left:card:3": false
-                    }
+                    "flags": {}
                 }
             }
         },
         "weight": 1,
         "isAvailableWhen": [
             {
-                "state": {},
-                "flags": {
-                    "a-left:card:3": true
-                }
+                "state": {
+                    "work-hour:prop:23": [
+                        0,
+                        2
+                    ]
+                },
+                "flags": {}
             }
         ],
         "type": "card"
     },
     {
-        "image": "",
-        "title": "A:L:L",
-        "text": "A:L:L",
-        "location": "A:L:L",
+        "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?fit=crop&w=800&q=60",
+        "title": "Looking good",
+        "text": "You seem sharp today. Keep up the good work",
+        "location": "In the parliament corridors",
         "actions": {
             "left": {
-                "description": "A:L:L:L",
+                "description": "*shrug*",
                 "modifier": {
-                    "type": "set",
-                    "state": {},
-                    "flags": {
-                        "all-left:card:8": true,
-                        "al-left:card:6": false
-                    }
+                    "type": "add",
+                    "state": {
+                        "staff-patience:prop:22": -1
+                    },
+                    "flags": {}
                 }
             },
             "right": {
-                "description": "A:L:L:R",
+                "description": "Thanks",
                 "modifier": {
-                    "type": "set",
+                    "type": "add",
                     "state": {},
-                    "flags": {
-                        "all-right:card:9": true,
-                        "al-left:card:6": false
-                    }
+                    "flags": {}
                 }
             }
         },
         "weight": 1,
         "isAvailableWhen": [
             {
-                "state": {},
-                "flags": {
-                    "al-left:card:6": true
-                }
+                "state": {
+                    "work-hour:prop:23": [
+                        3,
+                        4
+                    ]
+                },
+                "flags": {}
             }
         ],
         "type": "card"
     },
     {
-        "image": "",
-        "title": "A:L:R",
-        "text": "A:L:R",
-        "location": "A:L:R",
+        "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?fit=crop&w=800&q=60",
+        "title": "Nice lunch?",
+        "text": "You seem happy. Did you have a good lunch?",
+        "location": "In the parliament corridors",
         "actions": {
             "left": {
-                "description": "A:L:R:L",
+                "description": "*shrug*",
                 "modifier": {
-                    "type": "set",
-                    "state": {},
-                    "flags": {
-                        "alr-left:card:10": true,
-                        "al-right:card:7": false
-                    }
+                    "type": "add",
+                    "state": {
+                        "staff-patience:prop:22": -1
+                    },
+                    "flags": {}
                 }
             },
             "right": {
-                "description": "A:L:R:R",
+                "description": "Indeed I did",
                 "modifier": {
-                    "type": "set",
+                    "type": "add",
                     "state": {},
-                    "flags": {
-                        "alr-right:card:11": true,
-                        "al-right:card:7": false
-                    }
+                    "flags": {}
                 }
             }
         },
         "weight": 1,
         "isAvailableWhen": [
             {
-                "state": {},
-                "flags": {
-                    "al-right:card:7": true
-                }
-            }
-        ],
-        "type": "card"
-    },
-    {
-        "image": "",
-        "title": "A:R",
-        "text": "A:R",
-        "location": "A:R",
-        "actions": {
-            "left": {
-                "description": "A:R:L",
-                "modifier": {
-                    "type": "set",
-                    "state": {},
-                    "flags": {
-                        "ar-left:card:12": true,
-                        "a-right:card:4": false
-                    }
-                }
-            },
-            "right": {
-                "description": "A:R:R",
-                "modifier": {
-                    "type": "set",
-                    "state": {},
-                    "flags": {
-                        "ar-right:card:13": true,
-                        "a-right:card:4": false
-                    }
-                }
-            }
-        },
-        "weight": 1,
-        "isAvailableWhen": [
-            {
-                "state": {},
-                "flags": {
-                    "a-right:card:4": true
-                }
-            }
-        ],
-        "type": "card"
-    },
-    {
-        "image": "",
-        "title": "A:R:L",
-        "text": "A:R:L",
-        "location": "A:R:L",
-        "actions": {
-            "left": {
-                "description": "A:R:L:L",
-                "modifier": {
-                    "type": "set",
-                    "state": {},
-                    "flags": {
-                        "arl-left:card:14": true,
-                        "ar-left:card:12": false
-                    }
-                }
-            },
-            "right": {
-                "description": "A:R:L:R",
-                "modifier": {
-                    "type": "set",
-                    "state": {},
-                    "flags": {
-                        "arl-right:card:15": true,
-                        "ar-left:card:12": false
-                    }
-                }
-            }
-        },
-        "weight": 1,
-        "isAvailableWhen": [
-            {
-                "state": {},
-                "flags": {
-                    "ar-left:card:12": true
-                }
-            }
-        ],
-        "type": "card"
-    },
-    {
-        "image": "",
-        "title": "A:R:R",
-        "text": "A:R:R",
-        "location": "A:R:R",
-        "actions": {
-            "left": {
-                "description": "A:R:R:L",
-                "modifier": {
-                    "type": "set",
-                    "state": {},
-                    "flags": {
-                        "arr-left:card:16": true,
-                        "ar-right:card:13": false
-                    }
-                }
-            },
-            "right": {
-                "description": "A:R:R:R",
-                "modifier": {
-                    "type": "set",
-                    "state": {},
-                    "flags": {
-                        "arr-right:card:17": true,
-                        "ar-right:card:13": false
-                    }
-                }
-            }
-        },
-        "weight": 1,
-        "isAvailableWhen": [
-            {
-                "state": {},
-                "flags": {
-                    "ar-right:card:13": true
-                }
+                "state": {
+                    "work-hour:prop:23": [
+                        5,
+                        7
+                    ]
+                },
+                "flags": {}
             }
         ],
         "type": "card"

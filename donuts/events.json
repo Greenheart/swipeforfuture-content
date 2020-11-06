@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "initialEventCardId": "welcome:card:0",
+        "isAvailableWhen": [
+            {
+                "state": {},
+                "flags": {
+                    "introduction-complete:prop:21": false
+                }
+            }
+        ],
+        "probability": 1
+    }
+]
