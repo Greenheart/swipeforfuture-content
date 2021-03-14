@@ -1,5 +1,4 @@
 import {
-    CardData,
     EventCard,
     WorldEvent,
     WorldQuery,
@@ -8,6 +7,7 @@ import {
     cardLogic,
     addModifier,
     unsplashImage,
+    cardsFromSequence,
 } from "../../content-utils"
 import * as Stats from "./stats"
 
@@ -18,7 +18,11 @@ const images = {
     coalMiner: unsplashImage("1529088746738-c4c0a152fb2c"),
     environmentallyMindedCitizen: unsplashImage("1546541612-82d19b258cd5"),
     undecidedVoter: unsplashImage("1584799235813-aaf50775698c"),
+    uiJobs: "https://i.imgur.com/2aqOszZ.png",
 }
+
+// TODO: add images for all icons
+// TODO: Add better icons and decide
 
 const mockCard = (card: any) => {
     return cardLogic(
@@ -92,7 +96,7 @@ const UI_1 = cardContent(
 )
 
 const UI_Jobs = cardContent(
-    images.campaignAdvisor,
+    images.uiJobs,
     Title.Tutorial,
     "This is the economy icon. It represents the jobs, production, and trade power of the country.",
     "",
@@ -243,33 +247,37 @@ const Intro_Final = cardContent(
     ["No, I want to hear the tutorial again", "Yes, I am ready to play!"],
 )
 
-export const cards: CardData[] = [
-    mockCard(Hello_Player),
-    mockCard(How_to_Swipe),
-    mockCard(Story_1),
-    mockCard(Story_2),
-    mockCard(Story_3),
-    mockCard(UI_1),
-    mockCard(UI_Jobs),
-    mockCard(UI_Envi),
-    mockCard(UI_Money),
-    mockCard(UI_Popularity),
-    mockCard(UI_Green),
-    mockCard(UI_Test),
-    mockCard(UI_Test2),
-    mockCard(UI_TestWind),
-    mockCard(UI_TestSolar),
-    mockCard(UI_Test_3),
-    mockCard(Intro_FocusGroup1),
-    mockCard(Intro_FocusGroup2),
-    mockCard(Intro_FocusGroup_Miner),
-    mockCard(Intro_FocusGroup_Enviro),
-    mockCard(Intro_FocusGroup_Unde),
-    mockCard(Intro_FocusGroupFinal),
-    mockCard(Intro_Happiness),
-    mockCard(Intro_Listen),
-    mockCard(Intro_Final),
-]
+export const cards = cardsFromSequence({
+    sequence: [
+        { card: mockCard(Hello_Player) },
+        { card: mockCard(How_to_Swipe) },
+        { card: mockCard(Story_1) },
+        { card: mockCard(Story_2) },
+        { card: mockCard(Story_3) },
+        { card: mockCard(UI_1) },
+        { card: mockCard(UI_Jobs) },
+        { card: mockCard(UI_Envi) },
+        { card: mockCard(UI_Money) },
+        { card: mockCard(UI_Popularity) },
+        { card: mockCard(UI_Green) },
+        { card: mockCard(UI_Test) },
+        {
+            card: mockCard(UI_Test2),
+            left: { card: mockCard(UI_TestWind) },
+            right: { card: mockCard(UI_TestSolar) },
+        },
+        { card: mockCard(UI_Test_3) },
+        { card: mockCard(Intro_FocusGroup1) },
+        { card: mockCard(Intro_FocusGroup2) },
+        { card: mockCard(Intro_FocusGroup_Miner) },
+        { card: mockCard(Intro_FocusGroup_Enviro) },
+        { card: mockCard(Intro_FocusGroup_Unde) },
+        { card: mockCard(Intro_FocusGroupFinal) },
+        { card: mockCard(Intro_Happiness) },
+        { card: mockCard(Intro_Listen) },
+        { card: mockCard(Intro_Final) },
+    ],
+})
 
 export const eventCards: { [x: string]: EventCard } = {}
 export const events: WorldEvent[] = []
