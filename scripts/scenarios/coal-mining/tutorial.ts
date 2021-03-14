@@ -11,7 +11,7 @@ import {
 } from "../../content-utils"
 import * as Stats from "./stats"
 
-const alwaysState: WorldQuery["state"] = { [Stats.environment]: [0, 100] }
+const alwaysState: WorldQuery["state"] = { [Stats.Environment]: [0, 100] }
 
 const images = {
     campaignAdvisor: unsplashImage("1573497019940-1c28c88b4f3e"),
